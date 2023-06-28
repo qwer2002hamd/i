@@ -31,7 +31,9 @@ AUTHUSERS_COMMAND = get_command("AUTHUSERS_COMMAND")
 
 
 @app.on_message(
-    filters.command(AUTH_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+ filters.command(AUTH_COMMAND,"")
+    & ~filters.edited
+    & ~BANNED_USERS
 )
 @AdminActual
 async def auth(client, message: Message, _):
@@ -95,7 +97,9 @@ async def auth(client, message: Message, _):
 
 
 @app.on_message(
-    filters.command(UNAUTH_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+ filters.command(UNAUTH_COMMAND,"")
+    & ~filters.edited
+    & ~BANNED_USERS
 )
 @AdminActual
 async def unauthusers(client, message: Message, _):
@@ -130,7 +134,9 @@ async def unauthusers(client, message: Message, _):
 
 
 @app.on_message(
-    filters.command(AUTHUSERS_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+ filters.command(AUTHUSERS_COMMAND,"")
+    & ~filters.edited
+    & ~BANNED_USERS
 )
 @language
 async def authusers(client, message: Message, _):

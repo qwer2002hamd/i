@@ -498,8 +498,9 @@ async def play_commnd(
                 )
 
 @app.on_message(
-    command(["/play", "/vplay", "play", "vplay", "شغل", "تشغيل", "فديو", "فيديو"])
+ filters.command(["/play", "/vplay", "play", "vplay", "شغل", "تشغيل", "فديو", "فيديو"])
     & filters.channel
+    & ~filters.edited
     & ~BANNED_USERS
 )
 @PlayWrapper

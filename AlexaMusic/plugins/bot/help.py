@@ -34,9 +34,13 @@ async def helper_private(
         _ = get_string(language)
         keyboard = help_pannel(_, True)
         if update.message.photo:
-            await update.message.reply_text(_["help_1"], reply_markup=keyboard)
+            await update.edit_message_text(
+                _["help_1"], reply_markup=keyboard
+            )
         else:
-            await update.edit_message_text(_["help_1"], reply_markup=keyboard)
+            await update.edit_message_text(
+                _["help_1"], reply_markup=keyboard
+            )
     else:
         chat_id = update.chat.id
         if await is_commanddelete_on(update.chat.id):

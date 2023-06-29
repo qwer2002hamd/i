@@ -36,11 +36,11 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text=_["PL_B_1"],
+                text=_["‹ قائمة التشغيل ›"],
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text=_["PL_B_3"],
+                text=_["‹ قائمة التحڪم ›"],
                 callback_data=f"PanelMarkup {videoid}|{chat_id}",
             ), 
         ],
@@ -68,11 +68,11 @@ def telegram_markup_timer(_, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text=_["PL_B_1"],
+                text=_["‹ قائمة التشغيل ›"],
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text=_["PL_B_3"],
+                text=_["‹ قائمة التحڪم ›"],
                 callback_data=f"PanelMarkup {videoid}|{chat_id}",
             ), 
         ],
@@ -96,11 +96,11 @@ def stream_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["PL_B_1"],
+                text=_["‹ قائمة التشغيل ›"],
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text=_["PL_B_3"],
+                text=_["‹ قائمة التحڪم ›"],
                 callback_data=f"PanelMarkup {videoid}|{chat_id}",
             ), 
         ],
@@ -121,7 +121,7 @@ def telegram_markup(_, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["PL_B_3"],
+                text=_["‹ قائمة التحڪم ›"],
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
             InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close"),
@@ -305,11 +305,6 @@ def queue_markup(_, videoid, chat_id):
                 callback_data=f"ADMIN Resume|{chat_id}",
             ),
             InlineKeyboardButton(text="وقف", callback_data=f"ADMIN Pause|{chat_id}"),
-        ],
-        [
-            InlineKeyboardButton(text="قائمه التشغيل", callback_data=f"add_playlist {videoid}"),
-        ],
-        [
             InlineKeyboardButton(text="تخطي", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Stop|{chat_id}"),
         ],

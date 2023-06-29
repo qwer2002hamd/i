@@ -1,8 +1,6 @@
 from typing import Union
 
 from pyrogram.types import InlineKeyboardButton
-
-from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP
 from AlexaMusic import app
 
 

@@ -24,7 +24,9 @@ RESUME_COMMAND = get_command("RESUME_COMMAND")
 
 
 @app.on_message(
-    filters.command(RESUME_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+ filters.command(RESUME_COMMAND,"")
+    & ~filters.edited
+    & ~BANNED_USERS
 )
 @AdminRightsCheck
 async def resume_com(cli, message: Message, _, chat_id):

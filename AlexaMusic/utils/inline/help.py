@@ -53,7 +53,7 @@ def help_back_markup(_):
             [
                 InlineKeyboardButton(
                     text=_["BACK_BUTTON"],
-                    callback_data=f"settings_back_helper",
+                    callback_data=f"help_back",
                 ),
                 InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data=f"close"),
             ]
@@ -72,3 +72,66 @@ def private_help_panel(_):
         ],
     ]
     return buttons
+
+def help_pannel(_, START: Union[bool, int] = None):
+    upl = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    text="‹ اوامر المجموعات ›",
+                    callback_data="help_callback hb2",
+                ),
+            ],
+            mark,
+        ]
+    )
+    return upl
+
+
+def help_back_markup(_):
+    upl = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    text=_["‹ اوامر بالانجليزي ›"],
+                    callback_data=f"help_callback hb3",
+                ),
+                InlineKeyboardButton(
+                    text=_["‹ اوامر بالعربي ›"],
+                    callback_data=f"help_callback hb2",
+            ]
+        ]
+    )
+    return upl
+
+
+def help_pannel(_, START: Union[bool, int] = None):
+    upl = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    text="‹ اوامر مشتركه ›",
+                    callback_data="help_callback hb4",
+                ),
+            ],
+            mark,
+        ]
+    )
+    return upl
+
+
+def help_back_markup(_):
+    upl = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    text=_["‹ اوامر بالانجليزي ›"],
+                    callback_data=f"help_callback hb5",
+                ),
+                InlineKeyboardButton(
+                    text=_["‹ اوامر بالعربي ›"],
+                    callback_data=f"help_callback hb4",
+            ]
+        ]
+    )
+    return upl

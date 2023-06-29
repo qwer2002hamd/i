@@ -36,13 +36,16 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text=_["PL_B_2"],
+                text=_["PL_B_1"],
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup {videoid}|{chat_id}",
-            )
+            ), 
+        ],
+        [
+            InlineKeyboardButton(text="‹ قـناة الـسورس ›", url=f"https://t.me/ah07v"),
         ],
         [
             InlineKeyboardButton(
@@ -65,13 +68,22 @@ def telegram_markup_timer(_, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text=_["PL_B_2"],
+                text=_["PL_B_1"],
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
                 text=_["PL_B_3"],
-                callback_data=f"PanelMarkup None|{chat_id}",
-            ),
+                callback_data=f"PanelMarkup {videoid}|{chat_id}",
+            ), 
+        ],
+        [
+            InlineKeyboardButton(text="‹ قـناة الـسورس ›", url=f"https://t.me/ah07v"),
+        ],
+        [
+            InlineKeyboardButton(
+                text=f"اضغط لاضافه البوت لمجموعتك",
+                url=f"https://t.me/USER_BOT?startgroup=true",
+            )
         ],
     ]
     return buttons
@@ -84,13 +96,22 @@ def stream_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["PL_B_2"],
+                text=_["PL_B_1"],
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
                 text=_["PL_B_3"],
-                callback_data=f"PanelMarkup None|{chat_id}",
-            ),
+                callback_data=f"PanelMarkup {videoid}|{chat_id}",
+            ), 
+        ],
+        [
+            InlineKeyboardButton(text="‹ قـناة الـسورس ›", url=f"https://t.me/ah07v"),
+        ],
+        [
+            InlineKeyboardButton(
+                text=f"اضغط لاضافه البوت لمجموعتك",
+                url=f"https://t.me/USER_BOT?startgroup=true",
+            )
         ],
     ]
     return buttons
@@ -284,7 +305,11 @@ def queue_markup(_, videoid, chat_id):
                 callback_data=f"ADMIN Resume|{chat_id}",
             ),
             InlineKeyboardButton(text="وقف", callback_data=f"ADMIN Pause|{chat_id}"),
+        ],
+        [
             InlineKeyboardButton(text="قائمه التشغيل", callback_data=f"add_playlist {videoid}"),
+        ],
+        [
             InlineKeyboardButton(text="تخطي", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Stop|{chat_id}"),
         ],

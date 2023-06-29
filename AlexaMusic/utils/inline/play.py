@@ -71,6 +71,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
+            ),
         ],
     ]
     return buttons
@@ -89,6 +90,7 @@ def stream_markup(_, videoid, chat_id):
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
+            ),
         ],
     ]
     return buttons

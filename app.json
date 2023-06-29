@@ -1,7 +1,7 @@
 {
-    "name": "Alexa Music",
-    "description": "Deploy Alexa music on railwey make sure to star the projecte.",
-    "logo": "https://telegra.ph/file/ba967503682a55beaedd3.png",
+    "name": "˹ʜᴀᴍᴅ ✘ ᴍᴜsɪᴄ˼ 🫧🕊️⃝",
+    "description": "صل على النبي وتبسم🥺❤✨",
+    "logo": "https://telegra.ph/file/a0b4ae6f5304825e45f8e.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -28,9 +28,14 @@
         "value": "",
         "required": true
       },
+      "MUSIC_BOT_NAME": {
+        "description": "A name for your Music Bot. You can use special characters bot ko jhaat farak ni padega",
+        "value": "˹ʜᴀᴍᴅ ✘ ᴍᴜsɪᴄ˼ 🫧🕊️⃝",
+        "required": true
+      },
       "OWNER_ID": {
         "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
-        "value": "5303133436",
+        "value": "1748768168",
         "required": true
       },        
       "MONGO_DB_URI": {

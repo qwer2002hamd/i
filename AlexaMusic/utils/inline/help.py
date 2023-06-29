@@ -99,7 +99,9 @@ def help_back_markup(_):
                 InlineKeyboardButton(
                     text=_["‹ اوامر بالعربي ›"],
                     callback_data=f"help_callback hb2",
-            ]
+                ),
+            ],
+            mark,
         ]
     )
     return upl
@@ -131,7 +133,9 @@ def help_back_markup(_):
                 InlineKeyboardButton(
                     text=_["‹ اوامر بالعربي ›"],
                     callback_data=f"help_callback hb4",
-            ]
+                ),
+            ],
+            mark,
         ]
     )
     return upl

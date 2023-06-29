@@ -24,7 +24,9 @@ UNMUTE_COMMAND = get_command("UNMUTE_COMMAND")
 
 
 @app.on_message(
-    filters.command(UNMUTE_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+ filters.command(UNMUTE_COMMAND,"")
+    & ~filters.edited
+    & ~BANNED_USERS
 )
 @AdminRightsCheck
 async def unmute_admin(Client, message: Message, _, chat_id):

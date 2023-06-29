@@ -145,7 +145,7 @@ SOUNCLOUD_IMG_URL = getenv(
 
 YOUTUBE_IMG_URL = getenv(
     "YOUTUBE_IMG_URL",
-    "https://telegra.ph/file/4047282f49ff471a9e85e.jpg",
+    "assets/Youtube.jpeg",
 )
 
 SPOTIFY_ARTIST_IMG_URL = getenv(
@@ -261,7 +261,7 @@ if SOUNCLOUD_IMG_URL:
             sys.exit()
 
 if YOUTUBE_IMG_URL:
-    if YOUTUBE_IMG_URL != "https://telegra.ph/file/4047282f49ff471a9e85e.jpg":
+    if YOUTUBE_IMG_URL != "assets/Youtube.jpeg":
         if not re.match("(?:http|https)://", YOUTUBE_IMG_URL):
             print(
                 "[ERROR] - Your YOUTUBE_IMG_URL url is wrong. Please ensure that it starts with https://"

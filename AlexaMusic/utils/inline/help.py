@@ -56,7 +56,6 @@ def help_back_markup(_):
                     callback_data=f"settings_back_helper",
                 ),
                 InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data=f"close"),
-    ]
             ]
         ]
     )

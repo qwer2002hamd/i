@@ -37,8 +37,8 @@ def help_pannel(_, START: Union[bool, int] = None):
             ],
             [
                 InlineKeyboardButton(
-                    text="‹ اوامر مشتركه ›",
-                    callback_data="help_callback hb4",
+                    text="‹ اوامر بالانگليزي ›",
+                    callback_data="help_callback hb3",
                 ),
             ],
             mark,

@@ -25,7 +25,9 @@ SHUFFLE_COMMAND = get_command("SHUFFLE_COMMAND")
 
 
 @app.on_message(
-    filters.command(SHUFFLE_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+ filters.command(SHUFFLE_COMMAND,"")
+    & ~filters.edited
+    & ~BANNED_USERS
 )
 @AdminRightsCheck
 async def admins(Client, message: Message, _, chat_id):

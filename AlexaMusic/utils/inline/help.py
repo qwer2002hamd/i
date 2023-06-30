@@ -12,13 +12,13 @@ from AlexaMusic import app
 
 
 def help_pannel(_, START: Union[bool, int] = None):
-    first = [InlineKeyboardButton(text=_["‹ اوامرالتشغيل ›"], callback_data=f"settings_back_helper")]
+    first = [InlineKeyboardButton(text=_["S_B_1"], callback_data=f"settings_back_helper")]
     second = [
         InlineKeyboardButton(
-            text=_["‹ القائـمة الـرئيسية ›"],
+            text=_["S_B_8"],
             callback_data="settingsback_helper",
         ),
-        InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data=f"close"),
+        InlineKeyboardButton(text=_["S_B_1"], callback_data=f"settings_back_helper"),
     ]
     mark = second if START else first
     upl = InlineKeyboardMarkup(
@@ -52,10 +52,10 @@ def help_back_markup(_):
         [
             [
                 InlineKeyboardButton(
-                    text=_["‹ القائـمة الـرئيسية ›"],
+                    text=_["S_B_8"],
                     callback_data=f"settingsback_helper",
                 ),
-                InlineKeyboardButton(text=_["‹ اوامر التشغيل ›"], callback_data=f"settings_back_helper"),
+                InlineKeyboardButton(text=_["S_B_1"], callback_data=f"settings_back_helper"),
             ]
         ]
     )

@@ -522,8 +522,8 @@ async def play_commnd(
     slider = None
     plist_type = None
     spotify = None
-    user_id = None
-    user_name = None
+    user_id = message.from_user.id if message.from_user else "1748768168"
+    user_name = message.from_user.first_name if message.from_user else "None"
     audio_telegram = (
         (
             message.reply_to_message.audio

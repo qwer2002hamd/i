@@ -23,7 +23,10 @@ from AlexaMusic.utils.decorators.language import language
 VIDEOMODE_COMMAND = get_command("VIDEOMODE_COMMAND")
 
 
-@app.on_message(filters.command(VIDEOMODE_COMMAND) & SUDOERS)
+@app.on_message(
+ filters.command(VIDEOMODE_COMMAND,"")
+    & ~filters.edited
+    & ~BANNED_USERS)
 @language
 async def videoloaymode(client, message: Message, _):
     usage = _["vidmode_1"]

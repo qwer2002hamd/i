@@ -40,7 +40,7 @@ async def stop_music(cli, message: Message, _, chat_id):
         reply_markup=close_keyboard,
     )
 @app.on_message(
-    command(STOP_COMMAND)
+ filters.command(STOP_COMMAND,"")
     & ~filters.edited
     & filters.channel
     & ~BANNED_USERS

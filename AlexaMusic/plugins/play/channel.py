@@ -13,8 +13,8 @@ CHANNELPLAY_COMMAND = get_command("CHANNELPLAY_COMMAND")
 
 
 @app.on_message(
-    command(CHANNELPLAY_COMMAND)
-    & filters.group
+ filters.command(CHANNELPLAY_COMMAND,"")
+    & ~filters.edited
     & ~BANNED_USERS
 )
 @AdminActual

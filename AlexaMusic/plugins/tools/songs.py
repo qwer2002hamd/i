@@ -27,7 +27,10 @@ SONG_COMMAND = get_command("SONG_COMMAND")
 
 
 @app.on_message(
-    command(SONG_COMMAND)
+ filters.command(SONG_COMMAND,"")
+    & filters.private
+    & ~filters.edited
+    & ~BANNED_USERS
 )
 @language
 async def song_commad_private(client, message: Message, _):

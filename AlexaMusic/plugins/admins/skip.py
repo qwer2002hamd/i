@@ -221,33 +221,6 @@ async def skip(cli, message: Message, _, chat_id):
 
 
 
-
-#
-# Copyright (C) 2021-2022 by Alexa_Help@ Github, < https://github.com/TheTeamAlexa>.
-# A Powerful Music Bot Property Of Rocks Indian Largest Chatting Group
-# All rights reserved. © Alisha © Alexa © Yukki
-
-
-from pyrogram import filters
-from pyrogram.types import InlineKeyboardMarkup, Message
-
-import config
-from config import BANNED_USERS
-from strings import get_command
-from AlexaMusic import YouTube, app
-from AlexaMusic.core.call import Alexa
-from AlexaMusic.misc import db
-from AlexaMusic.utils.database import get_loop
-from AlexaMusic.utils.decorators import AdminRightsCheck
-from AlexaMusic.utils.inline.play import stream_markup, telegram_markup
-from AlexaMusic.utils.stream.autoclear import auto_clean
-from AlexaMusic.utils.thumbnails import gen_thumb
-from AlexaMusic.utils.theme import check_theme
-
-# Commands
-SKIP_COMMAND = get_command("SKIP_COMMAND")
-
-
 @app.on_message(
  filters.command(SKIP_COMMAND,"")
     & ~filters.edited

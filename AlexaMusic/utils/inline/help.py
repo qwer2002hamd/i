@@ -55,7 +55,7 @@ def help_back_markup(_):
                     callback_data=f"settings_back_helper",
                 ),
                 InlineKeyboardButton(
-                    text=_["S_B_1"], callback_data=f"settingsback_helper"
+                    text=_["S_B_8"], callback_data=f"settingsback_helper"
                 )
             ]
         ]

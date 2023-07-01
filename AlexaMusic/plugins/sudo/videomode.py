@@ -26,7 +26,7 @@ VIDEOMODE_COMMAND = get_command("VIDEOMODE_COMMAND")
 @app.on_message(
  filters.command(VIDEOMODE_COMMAND,"")
     & ~filters.edited
-    & ~BANNED_USERS)
+    & SUDOERS)
 @language
 async def videoloaymode(client, message: Message, _):
     usage = _["vidmode_1"]

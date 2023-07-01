@@ -24,8 +24,8 @@ AUTOEND_COMMAND = get_command("AUTOEND_COMMAND")
 
 @app.on_message(
  filters.command(AUTOEND_COMMAND,"")
-    & ~filters.edited
-    & ~BANNED_USERS)
+    & ~BANNED_USERS
+)
 async def auto_end_stream(client, message):
     usage = "**ᴜsᴀɢᴇ:**\n\n/autoend [enable|disable]"
     if len(message.command) != 2:
